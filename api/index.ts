@@ -1,23 +1,18 @@
-import { VercelApiHandler } from '@vercel/node';
+// api/index.ts
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from '../src/app.module';
 import { ExpressAdapter } from '@nestjs/platform-express';
+import { AppModule } from '../src/app.module';
 import * as express from 'express';
 
 const server = express();
-let cachedHandler: VercelApiHandler;
+let isInitialized = false;
 
-async function bootstrap(): Promise<VercelApiHandler> {
-  const app = await NestFactory.create(AppModule, new ExpressAdapter(server));
-  await app.init();
-  return (req, res) => server(req, res);
-}
-
-const handler: VercelApiHandler = async (req, res) => {
-  if (!cachedHandler) {
-    cachedHandler = await bootstrap();
+export default async function handler(req: any, res: any) {
+  if (!isInitialized) {
+    const app = await NestFactory.create(AppModule, new ExpressAdapter(server));
+    await app.init();
+    isInitialized = true;
   }
-  return cachedHandler(req, res);
-};
 
-export default handler;
+  return server(req, res); // Delegate the request to the express instance
+}
