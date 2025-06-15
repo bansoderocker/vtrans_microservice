@@ -19,5 +19,6 @@ async function bootstrap() {
   } else {
     await app.init(); // Do NOT call app.listen() for Vercel
   }
+  return app;
 }
 bootstrap();
