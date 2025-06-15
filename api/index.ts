@@ -2,8 +2,8 @@
 import { NestFactory } from '@nestjs/core';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import { AppModule } from '../src/app.module';
-import * as express from 'express';
 
+const express = require('express');
 const server = express();
 let isInitialized = false;
 
