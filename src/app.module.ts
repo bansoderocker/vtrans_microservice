@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { SqlDBModule } from './database/sql.module';
+import { FirebaseModule, SqlDBModule } from './database';
+import { VTransController, VTransModule } from './vtrans';
 
 @Module({
-  imports: [SqlDBModule],
+  imports: [SqlDBModule, VTransModule],
   controllers: [AppController],
   providers: [AppService],
 })
