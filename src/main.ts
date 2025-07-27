@@ -15,7 +15,7 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document); // http://localhost:3000/api
 
   if (process.env.NODE_ENV !== 'production') {
-    await app.listen(process.env.PORT ?? 3000);
+    await app.listen(process.env.PORT ?? 4000);
   } else {
     await app.init(); // Do NOT call app.listen() for Vercel
   }
