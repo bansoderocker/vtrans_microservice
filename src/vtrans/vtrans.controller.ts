@@ -1,6 +1,6 @@
 import { Controller, Post, Req, UseGuards } from '@nestjs/common';
 import { VTransService } from './vtrans.service';
-import { FirebaseAuthGuard } from 'src/auth/firebase-auth.guard';
+import { FirebaseAuthGuard } from '../auth';
 
 @Controller()
 export class VTransController {

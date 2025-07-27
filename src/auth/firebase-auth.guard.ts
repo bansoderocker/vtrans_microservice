@@ -6,7 +6,6 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { Request } from 'express';
-import * as admin from 'firebase-admin';
 import { firebase_admin } from './firebase';
 
 @Injectable()
