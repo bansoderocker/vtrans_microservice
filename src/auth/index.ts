@@ -1,2 +1,4 @@
 export * from './firebase';
 export * from './firebase-auth.guard';
+export * from './auth.service';
+export * from './auth.controller';
