@@ -19,6 +19,11 @@ async function bootstrap() {
   } else {
     await app.init(); // Do NOT call app.listen() for Vercel
   }
+  if (process.env.NODE_ENV === 'production') {
+    app.getHttpAdapter().get('/swagger-json', (req, res) => {
+      res.json(document);
+    });
+  }
   return app;
 }
 bootstrap();
