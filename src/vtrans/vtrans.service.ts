@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { FirebaseService } from 'src/database';
+import { FirebaseService } from '../database';
 
 @Injectable()
 export class VTransService {

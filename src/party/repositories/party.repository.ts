@@ -4,7 +4,7 @@ import { CreatePartyDto, UpdatePartyDto } from '../dtos/response';
 import { Party } from '../party.entity';
 import { MssqlRequestInput } from '@strongnguyen/nestjs-mssql';
 import { Int, VarChar } from 'mssql';
-import { SQLDBRepository } from 'src/common/repository';
+import { SQLDBRepository } from '@src/common/repository';
 
 @Injectable()
 export class PartyRepository implements IPartyRepository {

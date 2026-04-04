@@ -11,6 +11,7 @@
     "outDir": "./dist",
      "paths": {
       "*": ["./*"],
+      "@src/*": ["./src/*"],
       "@app/*": ["./src/app/*"],
       "@lib/*": ["./src/lib/*"]
     },
