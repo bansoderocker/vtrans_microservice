@@ -4,8 +4,8 @@ import { PartyService } from './party.service';
 import { PartyController } from './party.controller';
 import { INTERFACES } from './constants';
 import { PartyRepository } from './repositories';
-import { SqlDBModule } from 'src/database';
-import { SQLDBRepository } from 'src/common/repository';
+import { SqlDBModule } from '../database';
+import { SQLDBRepository } from '../common/repository';
 
 @Module({
   imports: [SqlDBModule],
