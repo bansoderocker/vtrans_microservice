@@ -2,7 +2,7 @@
 import { Module } from '@nestjs/common';
 import { VTransService } from './vtrans.service';
 import { VTransController } from './vtrans.controller';
-import { FirebaseModule } from 'database';
+import { FirebaseModule } from 'src/database';
 
 @Module({
   imports: [FirebaseModule],

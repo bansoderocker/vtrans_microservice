@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { SQLDBRepository } from '/common/repository';
 import { IPartyRepository } from '../interfaces/party.interface';
 import { CreatePartyDto, UpdatePartyDto } from '../dtos/response';
 import { Party } from '../party.entity';
 import { MssqlRequestInput } from '@strongnguyen/nestjs-mssql';
 import { Int, VarChar } from 'mssql';
+import { SQLDBRepository } from 'src/common/repository';
 
 @Injectable()
 export class PartyRepository implements IPartyRepository {

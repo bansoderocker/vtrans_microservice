@@ -2,10 +2,10 @@
 import { Module } from '@nestjs/common';
 import { PartyService } from './party.service';
 import { PartyController } from './party.controller';
-import { SqlDBModule } from '/database';
 import { INTERFACES } from './constants';
 import { PartyRepository } from './repositories';
-import { SQLDBRepository } from 'common/repository';
+import { SqlDBModule } from 'src/database';
+import { SQLDBRepository } from 'src/common/repository';
 
 @Module({
   imports: [SqlDBModule],
