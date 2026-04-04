@@ -1,8 +1,8 @@
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { getAuth, signInWithEmailAndPassword, Auth } from 'firebase/auth';
 import { firebase_admin, firebase_app } from './firebase';
-import { LoginRequest } from '/dtos/request';
 import axios from 'axios';
+import { LoginRequest } from 'src/dtos/request';
 
 @Injectable()
 export class AuthService {
